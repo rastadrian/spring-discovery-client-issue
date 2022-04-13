@@ -36,9 +36,7 @@ public class ClientIssueApplication {
     @LoadBalanced
     public WebClient.Builder webClient() {
         return WebClient
-                .builder()
-                .defaultHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
-                .defaultHeader(HttpHeaders.ACCEPT, MediaType.APPLICATION_JSON_VALUE);
+                .builder();
     }
 
     public static void main(String[] args) {
