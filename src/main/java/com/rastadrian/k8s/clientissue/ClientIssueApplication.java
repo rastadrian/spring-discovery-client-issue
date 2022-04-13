@@ -6,8 +6,6 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.client.discovery.ReactiveDiscoveryClient;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -35,8 +33,7 @@ public class ClientIssueApplication {
     @Bean
     @LoadBalanced
     public WebClient.Builder webClient() {
-        return WebClient
-                .builder();
+        return WebClient.builder();
     }
 
     public static void main(String[] args) {
